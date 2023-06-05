@@ -19,17 +19,16 @@ class Slide {
   onStart(event) {
     event.preventDefault();
     this.dist.startX = event.clientX;
-    this.slide.addEventListener('mousemove', this.onMove);
-    this.onMove();
+    this.wrapper.addEventListener('mousemove', this.onMove);
   };
 
   onMove (event) {
-        const finalPosition = this.updatePosition(event?.clientX);
+        const finalPosition = this.updatePosition(event.clientX);
         this.moveSlide(finalPosition)
   };
 
   onEnd (event){
-    this.slide.removeEventListener('mousemove', this.onMove);
+    this.wrapper.removeEventListener('mousemove', this.onMove);
     this.dist.finalPosition = this.dist.movePosition
   };
 
