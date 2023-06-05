@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+    display: block;
+}
+.slide-wrapper{
+    overflow: hidden;
+}
+.slide{
+    display: flex;
+}
+.slide li {
+    width: 80vw;
+    flex-shrink: 0;
+    max-width: 800px;
+    margin: 0 20px;
+}
+.slide {
+    transform: translate3d(0px, 0px, 0px);
+}
